@@ -4,7 +4,9 @@ RUN apt-get update
 
 WORKDIR /app
 
-COPY requirements.txt setup.py .
+# COPY requirements.txt setup.py .
+
+COPY requirements.txt .
 
 RUN pip install -r /app/requirements.txt
 

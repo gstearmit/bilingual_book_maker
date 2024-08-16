@@ -75,10 +75,10 @@ class Gemini(Base):
                 t_text = "Can not translate"
         except BlockedPromptException as e:
             print(str(e))
-            t_text = "Can not translate by SAFETY reason.(因安全问题不能翻译)"
+            t_text = "Can not translate by SAFETY reason."
         except Exception as e:
             print(str(e))
-            t_text = "Can not translate by other reason.(因安全问题不能翻译)"
+            t_text = "Can not translate by other reason."
 
         if len(self.convo.history) > 10:
             self.convo.history = self.convo.history[2:]
